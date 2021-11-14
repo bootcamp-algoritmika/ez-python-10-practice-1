@@ -20,7 +20,7 @@ class UserService(UserServiceI):
         return users
 
     def create_user(self, user: CreateUserDTO) -> User:
-        user = User(name=user.name, age=user.age)
+        user = User(id=0, name=user.name, age=user.age)
         return self.storage.create(user=user)
 
     def delete_user(self, user_id) -> None:
